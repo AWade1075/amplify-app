@@ -4,7 +4,7 @@ function TodosPage() {
     { label: 'Make Dinner', checked: false },
   ]);
 
-  const updateTodo = (index) => {
+  const updateTodo = (index: any) => {
     console.log(index);
     const updatedTodoItem = {
       ...todos[index],
