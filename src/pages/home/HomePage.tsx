@@ -1,3 +1,5 @@
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
+
 function Home() {
   const links = [{ label: 'TODO List', path: '/todos' }];
 
