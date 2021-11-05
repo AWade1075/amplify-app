@@ -6,6 +6,7 @@ function AuthRoute(props: RouteProps) {
   const { user } = useContext(AuthContext);
 
   console.log('USER: ', user?.username);
+
   return <p>test </p>;
 }
 
