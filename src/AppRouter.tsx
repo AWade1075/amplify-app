@@ -4,7 +4,7 @@ import HomePage from './pages/home/HomePage';
 import UserProfilePage from './pages/user-profile/UserProfilePage';
 import LoginPage from './pages/login/LoginPage';
 
-import AuthRoute from './components/AuthRoute/AuthRoute';
+import AuthComponent from './components/AuthComponent/AuthComponent';
 
 function AppRouter() {
   console.log('router');
@@ -12,7 +12,14 @@ function AppRouter() {
     <Routes>
       <Route path="/" element={<HomePage />}></Route>
       <Route path="/login" element={<LoginPage />} />
-      <AuthRoute path="/user-profile" element={<UserProfilePage />} />
+      <Route
+        path="/user-profile"
+        element={
+          <AuthComponent>
+            <UserProfilePage />
+          </AuthComponent>
+        }
+      />
     </Routes>
   );
 }
