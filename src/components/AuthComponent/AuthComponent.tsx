@@ -13,7 +13,7 @@ function AuthComponent({
   const location = useLocation();
 
   if (!user?.username) {
-    return <Navigate to="/login" state={{ from: location }} />;
+    return <Navigate to="/" state={{ from: location }} />;
   }
   return children;
 }

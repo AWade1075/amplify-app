@@ -1,15 +1,9 @@
-import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
-
 function Home() {
-  const links = [{ label: 'TODO List', path: '/todos' }];
-
   return (
-    <div className="container">
+    <div className="container-fluid">
       <div className="row">
         <div className="col-6">
-          {links.map((link) => (
-            <a href={link?.path}>{link?.label}</a>
-          ))}
+          <p>Home</p>
         </div>
       </div>
     </div>
