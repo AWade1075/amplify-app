@@ -1,22 +1,22 @@
 import { AmplifySignOut } from '@aws-amplify/ui-react';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../../App';
 
-interface SiteHeaderProps {
-  isLoggedIn: boolean;
-}
-function SiteHeader({ isLoggedIn }: SiteHeaderProps) {
+function SiteHeader() {
+  const { isSignedIn } = useContext(AuthContext);
   return (
     <div className="site-header">
       <div className="container-fluid">
         <div className="d-flex align-items-center justify-content-between">
           <h1 className="">GoodPlays</h1>
 
-          {isLoggedIn && (
+          {isSignedIn && (
             <div className="d-flex align-items-center justify-items-between">
-              <AmplifySignOut />
-              <Link className="header-link" to="/user-profile">
+              <Link className="app-link mx-4" to="/user-profile">
                 My Profile
               </Link>
+              <AmplifySignOut />
             </div>
           )}
         </div>

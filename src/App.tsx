@@ -28,7 +28,6 @@ function App() {
 
   useEffect(() => {
     return onAuthUIStateChange((nextAuthState, authData) => {
-      console.log('setting user', authData);
       setUser(authData);
       setIsSignedIn(!!authData);
     });
@@ -39,7 +38,7 @@ function App() {
       <AuthContext.Provider
         value={{ user, isSignedIn, setUser, setIsSignedIn }}
       >
-        <SiteHeader isLoggedIn={isSignedIn} />
+        <SiteHeader />
         <div className="container-fluid app">
           {isSignedIn ? (
             <AppRouter />

@@ -7,9 +7,12 @@
   padding: 1rem 2rem;
 }
 
-.header-link {
+.app-link {
   text-decoration: none;
   color: $orange-primary;
   font-weight: bold;
-  margin: 0 1rem;
+
+  &:hover {
+    color: white;
+  }
 }
